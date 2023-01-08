@@ -94,12 +94,68 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 10% 5%;
-    h1 {
-      display: flex;
-      align-items: center;
+
+    p {
+      color: var(--GrayishBlue);
+      margin-bottom: 5%;
     }
-    &__month {
-      font-size: 20px;
+
+    h1 {
+      display: none !important;
     }
   }
+
+  .price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--DarkDesaturatedBlue);
+    margin: 4% 0;
+
+    &__month {
+      font-size: 15px;
+      color: var(--GrayishBlue);
+      margin-left: 4%;
+      font-weight: 100;
+    }
+  }
+
+  &__range {
+    padding: 0 5%;
+    input {
+      width: 100%;
+    }
+  }
+}
+
+input[type="range"] {
+  -webkit-appearance: none; //quita la barra por defecto
+  width: 100%;
+  background: linear-gradient(
+    83deg,
+    hsl(174, 86%, 45%) 60%,
+    hsl(224, 65%, 95%) 60%
+  );
+  border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 9px;
+}
+
+//cambia el boton de la linea
+input[type="range"]::-webkit-slider-thumb {
+  height: 40px;
+  width: 40px;
+  border: 0;
+  background: var(--StrongCyan);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.1);
+  background-image: url("../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: center;
+  -webkit-appearance: none; //quita el boton por defecto
+  margin-top: -17px;
 }
