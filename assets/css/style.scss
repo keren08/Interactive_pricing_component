@@ -158,6 +158,7 @@ input[type="range"]::-webkit-slider-thumb {
   background-position: center;
   -webkit-appearance: none; //quita el boton por defecto
   margin-top: -17px;
+  box-shadow: 0 0 4px 4px hsla(174, 86%, 45%, 0.44);
 }
 
 .card__package {
@@ -186,15 +187,15 @@ input[type="range"]::-webkit-slider-thumb {
 
   &__switch {
     background-color: var(--GrayishBlue);
-    width: 50px;
-    height: 30px;
+    width: 40px;
+    height: 20px;
     border-radius: 15px;
     display: flex;
     align-items: center;
     padding: 1px;
     &__circle {
-      width: 25px;
-      height: 25px;
+      width: 17px;
+      height: 17px;
       background-color: aliceblue;
       border-radius: 100%;
     }
@@ -240,5 +241,87 @@ hr {
     border-radius: 20px;
     text-decoration: none;
     color: var(--VeryPaleBlue);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .body__container {
+    img {
+      max-height: 390px !important;
+    }
+  }
+
+  .app {
+    margin-top: 1%;
+    z-index: 10;
+
+    &__container {
+      flex-direction: column;
+      padding: 1% 7%;
+    }
+  }
+  .card {
+    padding: 4%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: 70%;
+    max-width: 700px;
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1% 5%;
+
+      p {
+        color: var(--GrayishBlue);
+        margin-bottom: 0%;
+        font-weight: 800;
+      }
+
+      h1 {
+        display: flex !important;
+      }
+    }
+  }
+
+  .card__range {
+    h1 {
+      display: none !important;
+    }
+  }
+
+  .card__package {
+    margin: 5% -2%;
+    justify-content: right;
+
+    .discount {
+      display: flex !important;
+      margin-right: 2%;
+    }
+  }
+
+  .card__description {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    &__list {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .body__container {
+    img {
+      min-height: 500px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .body__container {
+    img {
+      min-height: 1000px !important;
+    }
   }
 }
