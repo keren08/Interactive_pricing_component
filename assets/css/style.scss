@@ -159,3 +159,86 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; //quita el boton por defecto
   margin-top: -17px;
 }
+
+.card__package {
+  width: 100%;
+  display: flex;
+  color: var(--GrayishBlue);
+  font-size: 80%;
+  margin-bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p,
+  div,
+  span {
+    margin-left: 2%;
+  }
+
+  span {
+    background-color: var(--LightGrayishRed);
+    color: var(--LightRed);
+    padding: 1% 2%;
+    border-radius: 10px;
+    display: flex;
+  }
+
+  &__switch {
+    background-color: var(--GrayishBlue);
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    &__circle {
+      width: 25px;
+      height: 25px;
+      background-color: aliceblue;
+      border-radius: 100%;
+    }
+  }
+}
+
+.circle__active {
+  justify-content: flex-end;
+  background-color: var(--PaleBlue);
+}
+
+.discount {
+  display: none !important;
+}
+
+hr {
+  border: 1px solid var(--LightGrayishBlue);
+}
+
+.card__description {
+  margin: 6% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--GrayishBlue);
+
+  &__list {
+    min-width: 200px;
+    text-align: center;
+
+    p {
+      margin: 5% 0;
+    }
+  }
+}
+
+.card__description__boton {
+  margin: 10% 0;
+  .boton {
+    background-color: var(--DarkDesaturatedBlue);
+    padding: 10px 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--VeryPaleBlue);
+  }
+}
